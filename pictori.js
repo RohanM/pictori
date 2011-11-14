@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    alert("Hi");
+    $.getJSON("http://api.twicsy.com/search?q=love&callback=?", function(json) {
+	alert(json.count);
+    });
 });
