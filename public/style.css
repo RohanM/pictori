@@ -1,3 +1,65 @@
+body {
+  margin: 0;
+  background-color: #111;
+  font: 33px Helvetica, Arial, sans-serif;
+  letter-spacing: -3px;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+
+ul#menu {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+ul#menu li {
+  list-style-type: none;
+}
+ul#menu li a {
+  text-decoration: none;
+  font: 43px Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.selected         {            color: #ffffff; }
+
+.love             {            color: #a839b2; }
+.love.selected    { background-color: #a839b2; }
+
+.hate             {            color: #ff0071; }
+.hate.selected    { background-color: #ff0071; }
+
+.think            {            color: #acd030; }
+.think.selected   { background-color: #acd030; }
+
+.believe          {            color: #58aa00; }
+.believe.selected { background-color: #58aa00; }
+
+.feel             {            color: #00aa78; }
+.feel.selected    { background-color: #00aa78; }
+
+.wish             {            color: #0074ae; }
+.wish.selected    { background-color: #0074ae; }
+
+#credits {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  width: 200px;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -1px;
+}
+
+#content {
+  padding-left: 200px;
+}
+
 #images .image {
   float: left;
   margin: 2px;

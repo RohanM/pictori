@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Pictori</title>
+  <title>pictori</title>
   <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
   <script type="text/javascript" src="jquery.masonry.min.js"></script>
@@ -8,11 +8,26 @@
 </head>
 
 <body>
-  <h1>Pictori</h1>
+  <ul id="menu">
+    <li><a href="#" class="love" title="i love">love</a></li>
+    <li><a href="#" class="hate" title="i hate">hate</a></li>
+    <li><a href="#" class="think" title="i think">think</a></li>
+    <li><a href="#" class="believe" title="i believe">believe</a></li>
+    <li><a href="#" class="feel" title="i feel">feel</a></li>
+    <li><a href="#" class="wish" title="i wish">wish</a></li>
+  </ul>
 
-  <div id="images"></div>
-  <div id="images-loading"></div>
-  <div id="images-loaded"></div>
+  <div id="credits">
+    <h1>pictori</h1>
+
+    <p>based on <a href="http://twistori.com" class="love">twistori</a> by <a href="http://twitter.com/amyhoy" class="think">amy hoy</a> and <a href="http://twitter.com/thomasfuchs" class="believe">thomas fuchs</a>. pictori created by <a href="http://twitter.com/RohanM" class="feel">rohan mitchell</a> using the excellent <a href="http://twicsy.com" class="wish">twicsy api</a>.
+  </div>
+
+  <div id="content">
+    <div id="images"></div>
+    <div id="images-loading"></div>
+    <div id="images-loaded"></div>
+  </div>
 </body>
 
 </html>
