@@ -1,11 +1,24 @@
+var imageIDs = new Array();
+
 $(document).ready(function() {
+    setInterval("loadFreshImages()", 30000);
+    loadFreshImages();
+});
+
+function loadFreshImages() {
     $.getJSON("http://api.twicsy.com/search?q=love&sort=date&callback=?", function(json) {
 	// Load each image into #images-loading, a hidden div
 	for(i in json.results) {
-	    $("<img>")
-		.attr("src", json.results[i].thumb)
-		.wrap('<div class="image" />').parent()
-		.appendTo($("#images-loading"));
+	    if(!imageIDs[json.results[i].id]) {
+		$("<img>")
+		    .attr("src", json.results[i].thumb)
+		    .wrap('<div class="image" />').parent()
+		    .appendTo($("#images-loading"));
+		imageIDs[json.results[i].id] = true;
+		console.log("Added fresh image");
+	    } else {
+		console.log("Skipped existing image");
+	    }
 	}
 
 	// Hide images that fail to load
@@ -23,4 +36,4 @@ $(document).ready(function() {
 	    });
 	});
     });
-});
+}
