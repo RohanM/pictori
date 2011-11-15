@@ -1,3 +1,7 @@
 #images .image {
   float: left;
 }
+
+#images-loading {
+  display: none;
+}
