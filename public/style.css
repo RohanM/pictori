@@ -3,6 +3,6 @@
   margin: 2px;
 }
 
-#images-loading {
+#images-loading, #images-loaded {
   display: none;
 }
