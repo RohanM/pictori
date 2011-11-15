@@ -1,5 +1,6 @@
 #images .image {
   float: left;
+  margin: 2px;
 }
 
 #images-loading {
