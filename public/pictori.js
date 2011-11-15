@@ -11,7 +11,6 @@ $(document).ready(function() {
 // Transfer one loaded image from #images-loaded into #images
 function displayImage() {
     if($("#images-loaded .image").length > 0) {
-	console.log("Images in queue: "+$("#images-loaded .image").length);
 	var image = $("#images-loaded .image:first");
 	image.detach().prependTo($("#images"));
 	if($("#images .image").length < 2) {
@@ -19,6 +18,7 @@ function displayImage() {
 	} else {
 	    $("#images").masonry('appended', image);
 	}
+	console.log("Images in queue: "+$("#images-loaded .image").length);
     }
 }
 
@@ -38,16 +38,19 @@ function loadFreshImages() {
 	    }
 	}
 
-	// Hide images that fail to load
-	// TODO: Remove them instead
+	// Mark images that fail to load
 	$("#images-loading .image img").error(function() {
-	    $(this).parent().hide();
+	    $(this).data('error', 1);
 	});
 
-	// Move loaded images into #images-loaded
+	// Move loaded images into #images-loaded, remove images that failed to load
 	$("#images-loading .image").each(function() {
 	    $(this).imagesLoaded(function() {
-		$(this).detach().prependTo($("#images-loaded"));
+		if(!this.find("img").data('error')) {
+		    $(this).detach().prependTo($("#images-loaded"));
+		} else {
+		    $(this).remove();
+		}
 	    });
 	});
     });
