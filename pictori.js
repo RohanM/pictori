@@ -16,8 +16,6 @@ function loadFreshImages() {
 		    .appendTo($("#images-loading"));
 		imageIDs[json.results[i].id] = true;
 		console.log("Added fresh image");
-	    } else {
-		console.log("Skipped existing image");
 	    }
 	}
 
@@ -27,12 +25,15 @@ function loadFreshImages() {
 	    $(this).parent().hide();
 	});
 
-	// Move loaded images into #images (TODO: and masonrify them)
-	// To confirm: you can multi-call masonry() with new images and it'll gracefully update.
+	// Move loaded images into #images
 	$("#images-loading .image").each(function() {
 	    $(this).imagesLoaded(function() {
 		$(this).detach().prependTo($("#images"));
-		//$("#images").masonry({itemSelector: '.image'});
+		if($("#images .image").length < 2) {
+		    $("#images").masonry({itemSelector: '.image'});
+		} else {
+		    $("#images").masonry('appended', this);
+		}
 	    });
 	});
     });
