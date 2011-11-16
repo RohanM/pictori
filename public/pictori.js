@@ -29,8 +29,8 @@ function initPage() {
     menu.find("a").click(function() {
 	menu.find("a.selected").removeClass("selected");
 	$(this).addClass("selected");
-
 	loadFreshImages();
+	return false;
     });
     menu.find("a:first").click();
 }
@@ -47,6 +47,10 @@ function displayImage() {
 	} else {
 	    $("#images").masonry('appended', image);
 	}
+
+	// Scroll to bottom - can we do this without annoyingly taking over the browser?
+	//$('html, body').stop().animate({ scrollTop: $(document).height() }, 1500);
+
 	console.log("Images in queue: "+$("#images-loaded-"+topic+" .image").length);
     }
 }
