@@ -20,13 +20,31 @@
 </head>
 
 <body>
-  <ul id="menu">
-  </ul>
+  <!-- Begin Facebook Like code -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- End Facebook Like code -->
+
+  <ul id="menu"></ul>
 
   <div id="credits">
     <h1>pictori</h1>
 
-    <p>based on <a href="http://twistori.com" class="love">twistori</a> by <a href="http://twitter.com/amyhoy" class="think">amy hoy</a> and <a href="http://twitter.com/thomasfuchs" class="believe">thomas fuchs</a>. pictori created by <a href="http://twitter.com/RohanM" class="feel">rohan mitchell</a> using the excellent <a href="http://twicsy.com" class="wish">twicsy</a> api.
+    <p>based on <a href="http://twistori.com" class="love">twistori</a> by <a href="http://twitter.com/amyhoy" class="think">amy hoy</a> and <a href="http://twitter.com/thomasfuchs" class="believe">thomas fuchs</a>. pictori created by <a href="http://twitter.com/RohanM" class="feel">rohan mitchell</a> using the excellent <a href="http://twicsy.com" class="wish">twicsy</a> api.</p>
+
+    <div class="fb-like" data-href="http://pictorinow.com/" data-send="true" data-layout="button_count" data-width="175" data-show-faces="false" data-colorscheme="dark"></div>
+    <div class="twitter-tweet">
+      <a class="twitter-share-button" href="https://twitter.com/share" data-count="horizontal" data-via="RohanM">Tweet</a>
+      <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    </div>
   </div>
 
   <div id="content">
