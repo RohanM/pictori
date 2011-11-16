@@ -26,8 +26,6 @@ ul#menu li a {
   font-weight: bold;
 }
 
-.selected         {            color: #ffffff; }
-
 .love             {            color: #a839b2; }
 .love.selected    { background-color: #a839b2; }
 
@@ -46,6 +44,8 @@ ul#menu li a {
 .wish             {            color: #0074ae; }
 .wish.selected    { background-color: #0074ae; }
 
+.selected         {            color: #ffffff; }
+
 #credits {
   position: absolute;
   bottom: 25px;
@@ -57,7 +57,7 @@ ul#menu li a {
 }
 
 #content {
-  padding-left: 200px;
+  padding-left: 220px;
 }
 
 #images .image {

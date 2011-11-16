@@ -1,12 +1,39 @@
+var topics = ['love', 'hate', 'think', 'believe', 'feel', 'wish'];
+// TODO: Should we store the colours here and generate some CSS?
+
 var imageIDs = new Array();
 
 $(document).ready(function() {
+    initPage();
+
     setInterval("loadFreshImages()", 30000);
     loadFreshImages();
 
     setInterval("displayImage()", 2000);
 });
 
+// Set up HTML elements
+function initPage() {
+    var menu = $("#menu");
+    var content = $("#content");
+
+    // Build menu and loading/loaded images divs
+    for(i in topics) {
+	var topic = topics[i];
+	$('<a href="#" class="'+topic+'" title="i '+topic+'">').html(topic).appendTo($("<li>")).parent().appendTo(menu);
+	$('<div id="images-loading-'+topic+'"/>').appendTo(content);
+	$('<div id="images-loaded-'+topic+'"/>').appendTo(content);
+    }
+
+    // Wire up menu events, select first
+    menu.find("a").click(function() {
+	menu.find("a.selected").removeClass("selected");
+	$(this).addClass("selected");
+
+	loadFreshImages();
+    });
+    menu.find("a:first").click();
+}
 
 // Transfer one loaded image from #images-loaded into #images
 function displayImage() {
