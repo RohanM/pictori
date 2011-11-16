@@ -28,21 +28,27 @@ ul#menu li a {
 
 .love             {            color: #a839b2; }
 .love.selected    { background-color: #a839b2; }
+.love img         { border: 1px solid #a839b2; }
 
 .hate             {            color: #ff0071; }
 .hate.selected    { background-color: #ff0071; }
+.hate img         { border: 1px solid #ff0071; }
 
 .think            {            color: #acd030; }
 .think.selected   { background-color: #acd030; }
+.think img        { border: 1px solid #acd030; }
 
 .believe          {            color: #58aa00; }
 .believe.selected { background-color: #58aa00; }
+.believe img      { border: 1px solid #58aa00; }
 
 .feel             {            color: #00aa78; }
 .feel.selected    { background-color: #00aa78; }
+.feel img         { border: 1px solid #00aa78; }
 
 .wish             {            color: #0074ae; }
 .wish.selected    { background-color: #0074ae; }
+.wish img         { border: 1px solid #0074ae; }
 
 .selected         {            color: #ffffff; }
 
@@ -65,6 +71,6 @@ ul#menu li a {
   margin: 2px;
 }
 
-#images-loading, #images-loaded {
+.images-loading, .images-loaded {
   display: none;
 }

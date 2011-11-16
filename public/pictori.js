@@ -21,8 +21,8 @@ function initPage() {
     for(i in topics) {
 	var topic = topics[i];
 	$('<a href="#" class="'+topic+'" title="i '+topic+'">').html(topic).appendTo($("<li>")).parent().appendTo(menu);
-	$('<div id="images-loading-'+topic+'"/>').appendTo(content);
-	$('<div id="images-loaded-'+topic+'"/>').appendTo(content);
+	$('<div id="images-loading-'+topic+'" class="images-loading" />').appendTo(content);
+	$('<div id="images-loaded-'+topic+'" class="images-loaded" />').appendTo(content);
     }
 
     // Wire up menu events, select first
@@ -37,44 +37,49 @@ function initPage() {
 
 // Transfer one loaded image from #images-loaded into #images
 function displayImage() {
-    if($("#images-loaded .image").length > 0) {
-	var image = $("#images-loaded .image:first");
+    var topic = $("#menu a.selected").html();
+
+    if($("#images-loaded-"+topic+" .image").length > 0) {
+	var image = $("#images-loaded-"+topic+" .image:first");
 	image.detach().prependTo($("#images"));
 	if($("#images .image").length < 2) {
 	    $("#images").masonry({itemSelector: '.image'});
 	} else {
 	    $("#images").masonry('appended', image);
 	}
-	console.log("Images in queue: "+$("#images-loaded .image").length);
+	console.log("Images in queue: "+$("#images-loaded-"+topic+" .image").length);
     }
 }
 
 
 // Search Twicsy for images and load them into the hidden #images-loaded div
 function loadFreshImages() {
-    $.getJSON("http://api.twicsy.com/search?q=love&sort=date&callback=?", function(json) {
-	// Load each image into #images-loading, a hidden div
+    var topic = $("#menu a.selected").html();
+    var topic_uri = encodeURIComponent($("#menu a.selected").attr('title'));
+
+    $.getJSON("http://api.twicsy.com/search?q="+topic_uri+"&sort=date&callback=?", function(json) {
+	// Load each image into #images-loading-xyz, a hidden div
 	for(i in json.results) {
 	    if(!imageIDs[json.results[i].id]) {
 		$("<img>")
 		    .attr("src", json.results[i].thumb)
-		    .wrap('<div class="image" />').parent()
-		    .appendTo($("#images-loading"));
+		    .wrap('<div class="image '+topic+'" />').parent()
+		    .appendTo($("#images-loading-"+topic));
 		imageIDs[json.results[i].id] = true;
 		console.log("Added fresh image");
 	    }
 	}
 
 	// Mark images that fail to load
-	$("#images-loading .image img").error(function() {
+	$("#images-loading-"+topic+" .image img").error(function() {
 	    $(this).data('error', 1);
 	});
 
 	// Move loaded images into #images-loaded, remove images that failed to load
-	$("#images-loading .image").each(function() {
+	$("#images-loading-"+topic+" .image").each(function() {
 	    $(this).imagesLoaded(function() {
 		if(!this.find("img").data('error')) {
-		    $(this).detach().prependTo($("#images-loaded"));
+		    $(this).detach().prependTo($("#images-loaded-"+topic));
 		} else {
 		    $(this).remove();
 		}
