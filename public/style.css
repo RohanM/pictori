@@ -16,7 +16,7 @@ a {
 
 ul#sidebar-left, ul#sidebar-right {
   position: fixed;
-  top: 60px;
+  top: 20px;
   width: 200px;
   margin: 0;
   padding: 0;
@@ -28,36 +28,37 @@ ul#sidebar-left li, ul#sidebar-right li {
   list-style-type: none;
 }
 ul#sidebar-left li a, ul#sidebar-right li a {
+  display: block;
+  width: 165px;
+  height: 165px;
   text-decoration: none;
   font: 43px Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
-.love             {            color: #ff0000; }
+.love             { background-color: #400000; }
 .love.selected    { background-color: #ff0000; }
 .love img         { border: 5px solid #ff0000; }
 
-.hate             {            color: #ff8a00; }
+.hate             { background-color: #402200; }
 .hate.selected    { background-color: #ff8a00; }
 .hate img         { border: 5px solid #ff8a00; }
 
-.think            {            color: #d2ff00; }
+.think            { background-color: #344000; }
 .think.selected   { background-color: #d2ff00; }
 .think img        { border: 5px solid #d2ff00; }
 
-.believe          {            color: #00cd18; }
+.believe          { background-color: #003306; }
 .believe.selected { background-color: #00cd18; }
 .believe img      { border: 5px solid #00cd18; }
 
-.feel             {            color: #00ff96; }
+.feel             { background-color: #004026; }
 .feel.selected    { background-color: #00ff96; }
 .feel img         { border: 5px solid #00ff96; }
 
-.wish             {            color: #007eff; }
+.wish             { background-color: #001f40; }
 .wish.selected    { background-color: #007eff; }
 .wish img         { border: 5px solid #007eff; }
-
-.selected         {            color: #ffffff; }
 
 
 /************************************************************
