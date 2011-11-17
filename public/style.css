@@ -9,18 +9,25 @@ a {
   color: #fff;
 }
 
-ul#menu {
+
+/************************************************************
+ * Sidebars
+ ************************************************************/
+
+ul#sidebar-left, ul#sidebar-right {
   position: fixed;
   top: 60px;
-  left: 20px;
   width: 200px;
   margin: 0;
   padding: 0;
 }
-ul#menu li {
+ul#sidebar-left  { left: 0px; text-align: right; padding-right: 20px; }
+ul#sidebar-right { right: 0px; text-align: left; padding-left: 20px; }
+
+ul#sidebar-left li, ul#sidebar-right li {
   list-style-type: none;
 }
-ul#menu li a {
+ul#sidebar-left li a, ul#sidebar-right li a {
   text-decoration: none;
   font: 43px Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -52,21 +59,13 @@ ul#menu li a {
 
 .selected         {            color: #ffffff; }
 
-#credits {
-  position: fixed;
-  bottom: 25px;
-  left: 20px;
-  width: 200px;
-  font-size: 14px;
-  line-height: 15px;
-  letter-spacing: -1px;
-}
-.fb-like {
-  margin-bottom: 1em;
-}
+
+/************************************************************
+ * Content
+ ************************************************************/
 
 #content {
-  padding-left: 220px;
+  padding: 0 220px;
 }
 
 #images .image {
@@ -76,4 +75,23 @@ ul#menu li a {
 
 .images-loading, .images-loaded {
   display: none;
+}
+
+
+/************************************************************
+ * Credits
+ ************************************************************/
+
+#credits {
+  position: fixed;
+  bottom: 25px;
+  left: 20px;
+  width: 100%;
+  height: 100px;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -1px;
+}
+.fb-like {
+  margin-bottom: 1em;
 }
