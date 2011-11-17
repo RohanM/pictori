@@ -33,29 +33,29 @@ ul#sidebar-left li a, ul#sidebar-right li a {
   font-weight: bold;
 }
 
-.love             {            color: #a839b2; }
-.love.selected    { background-color: #a839b2; }
-.love img         { border: 5px solid #a839b2; }
+.love             {            color: #ff0000; }
+.love.selected    { background-color: #ff0000; }
+.love img         { border: 5px solid #ff0000; }
 
-.hate             {            color: #ff0071; }
-.hate.selected    { background-color: #ff0071; }
-.hate img         { border: 5px solid #ff0071; }
+.hate             {            color: #ff8a00; }
+.hate.selected    { background-color: #ff8a00; }
+.hate img         { border: 5px solid #ff8a00; }
 
-.think            {            color: #acd030; }
-.think.selected   { background-color: #acd030; }
-.think img        { border: 5px solid #acd030; }
+.think            {            color: #d2ff00; }
+.think.selected   { background-color: #d2ff00; }
+.think img        { border: 5px solid #d2ff00; }
 
-.believe          {            color: #58aa00; }
-.believe.selected { background-color: #58aa00; }
-.believe img      { border: 5px solid #58aa00; }
+.believe          {            color: #00cd18; }
+.believe.selected { background-color: #00cd18; }
+.believe img      { border: 5px solid #00cd18; }
 
-.feel             {            color: #00aa78; }
-.feel.selected    { background-color: #00aa78; }
-.feel img         { border: 5px solid #00aa78; }
+.feel             {            color: #00ff96; }
+.feel.selected    { background-color: #00ff96; }
+.feel img         { border: 5px solid #00ff96; }
 
-.wish             {            color: #0074ae; }
-.wish.selected    { background-color: #0074ae; }
-.wish img         { border: 5px solid #0074ae; }
+.wish             {            color: #007eff; }
+.wish.selected    { background-color: #007eff; }
+.wish img         { border: 5px solid #007eff; }
 
 .selected         {            color: #ffffff; }
 
@@ -85,12 +85,14 @@ ul#sidebar-left li a, ul#sidebar-right li a {
 #credits {
   position: fixed;
   bottom: 25px;
-  left: 20px;
+  left: 0px;
   width: 100%;
   height: 100px;
+  padding-left: 20px;
   font-size: 14px;
   line-height: 15px;
   letter-spacing: -1px;
+  border-top: 5px solid #fff;
 }
 .fb-like {
   margin-bottom: 1em;
