@@ -15,9 +15,10 @@ a {
  ************************************************************/
 
 ul#sidebar-left, ul#sidebar-right {
-  position: fixed;
+  position: absolute;
   top: 20px;
   width: 200px;
+  z-index: 10;
   margin: 0;
   padding: 0;
 }
@@ -87,7 +88,14 @@ ul.sidebar li a span {
  ************************************************************/
 
 #content {
-  padding: 0 220px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+#images {
+  padding: 10px 220px 140px 220px;
 }
 
 #images .image {
@@ -105,7 +113,7 @@ ul.sidebar li a span {
  ************************************************************/
 
 #credits {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
   left: 0px;
   width: 100%;
