@@ -44,7 +44,7 @@ function initPage() {
 
 // Transfer one loaded image from #images-loaded into #images
 function displayImage() {
-    var topic = $(".sidebar a.selected").html();
+    var topic = $(".sidebar a.selected span").html();
 
     if($("#images-loaded-"+topic+" .image").length > 0) {
 	var image = $("#images-loaded-"+topic+" .image:first");
@@ -62,7 +62,7 @@ function displayImage() {
 
 // Search Twicsy for images and load them into the hidden #images-loaded div
 function loadFreshImages() {
-    var topic = $(".sidebar a.selected").html();
+    var topic = $(".sidebar a.selected span").html();
     var topic_uri = encodeURIComponent($(".sidebar a.selected").attr('title'));
 
     $.getJSON("http://api.twicsy.com/search?q="+topic_uri+"&sort=date&callback=?", function(json) {
