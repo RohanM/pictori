@@ -126,6 +126,6 @@ ul.sidebar li a span {
   border-top: 3px solid #555;
 }
 #credits a { background: none; }
-.fb-like {
-  margin-bottom: 1em;
+.fb-like, .twitter-tweet {
+  float: left;
 }
