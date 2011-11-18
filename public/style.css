@@ -26,39 +26,60 @@ ul#sidebar-right { right: 0px; text-align: left; padding-left: 20px; }
 
 ul#sidebar-left li, ul#sidebar-right li {
   list-style-type: none;
+  margin-bottom: 10px;
+}
+ul#sidebar-left li {
+  float: right;
 }
 ul#sidebar-left li a, ul#sidebar-right li a {
   display: block;
-  width: 165px;
-  height: 165px;
+  width: 145px;
+  height: 145px;
+  padding: 10px;
   text-decoration: none;
   font: 43px Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
-.love             { background-color: #400000; }
-.love.selected    { background-color: #ff0000; }
-.love img         { border: 5px solid #ff0000; }
+ul.sidebar li a span {
+  padding-right: 3px;
+}
 
-.hate             { background-color: #402200; }
-.hate.selected    { background-color: #ff8a00; }
-.hate img         { border: 5px solid #ff8a00; }
+.love              { background-color: #ff0000; }
+.love.selected span{ color:            #ff0000;
+                     background-color: #ffffff; }
+.love img          { border: 5px solid #ff0000; }
+#credits a.love    { color:            #ff0000; }
 
-.think            { background-color: #344000; }
-.think.selected   { background-color: #d2ff00; }
-.think img        { border: 5px solid #d2ff00; }
+.hate              { background-color: #ff8a00; }
+.hate.selected span{ color:            #ff8a00;
+                     background-color: #ffffff; }
+.hate img          { border: 5px solid #ff8a00; }
+#credits a.hate    { color:            #ff8a00; }
 
-.believe          { background-color: #003306; }
-.believe.selected { background-color: #00cd18; }
-.believe img      { border: 5px solid #00cd18; }
+.think             { background-color: #d2ff00; }
+.think.selected span{ color:            #d2ff00;
+                     background-color: #ffffff; }
+.think img         { border: 5px solid #d2ff00; }
+#credits a.think   { color:            #d2ff00; }
 
-.feel             { background-color: #004026; }
-.feel.selected    { background-color: #00ff96; }
-.feel img         { border: 5px solid #00ff96; }
+.believe           { background-color: #00cd18; }
+.believe.selected span{ color:            #00cd18;
+                     background-color: #ffffff; }
+.believe img       { border: 5px solid #00cd18; }
+#credits a.believe { color:            #00cd18; }
 
-.wish             { background-color: #001f40; }
-.wish.selected    { background-color: #007eff; }
-.wish img         { border: 5px solid #007eff; }
+.feel              { background-color: #00ff96; }
+.feel.selected span{ color:            #00ff96;
+                     background-color: #ffffff; }
+.feel img          { border: 5px solid #00ff96; }
+#credits a.feel    { color:            #00ff96; }
+
+.wish              { background-color: #007eff; }
+.wish.selected span{ color:            #007eff;
+                     background-color: #ffffff; }
+.wish img          { border: 5px solid #007eff; }
+#credits a.wish    { color:            #007eff; }
 
 
 /************************************************************
@@ -95,6 +116,7 @@ ul#sidebar-left li a, ul#sidebar-right li a {
   letter-spacing: -1px;
   border-top: 5px solid #fff;
 }
+#credits a { background: none; }
 .fb-like {
   margin-bottom: 1em;
 }

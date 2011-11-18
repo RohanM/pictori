@@ -27,7 +27,7 @@ function initPage() {
     for(i in topics_array) {
 	var side = topics_array[i]['side'];
 	var topic = topics_array[i]['topic'];
-	$('<a href="#" class="'+topic+'" title="i '+topic+'">').html(topic).appendTo($("<li>")).parent().appendTo(sidebarList[side]);
+	$('<a href="#" class="'+topic+'" title="i '+topic+'">').html('<span>'+topic+'</span>').appendTo($("<li>")).parent().appendTo(sidebarList[side]);
 	$('<div id="images-loading-'+topic+'" class="images-loading" />').appendTo(content);
 	$('<div id="images-loaded-'+topic+'" class="images-loaded" />').appendTo(content);
     }
