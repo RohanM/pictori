@@ -1,14 +1,19 @@
 body {
   margin: 0;
-  background-color: #111;
+  background-color: #fff;
   font: 33px Helvetica, Arial, sans-serif;
   letter-spacing: -3px;
-  color: #fff;
+  color: #000;
 }
 a {
-  color: #fff;
+  color: #000;
 }
-
+h1 {
+  font: 2em/0.5em Georgia, Times, serif;
+  letter-spacing: 0px;
+  font-style: italic;
+  font-weight: bold;
+}
 
 /************************************************************
  * Sidebars
@@ -46,39 +51,35 @@ ul.sidebar li a span {
   padding-right: 3px;
 }
 
-.love              { background-color: #ff0000; }
-.love.selected span{ color:            #ff0000;
-                     background-color: #ffffff; }
-.love img          { border: 5px solid #ff0000; }
-#credits a.love    { color:            #ff0000; }
+.selected span     { background-color: #000000; }
 
-.hate              { background-color: #ff8a00; }
-.hate.selected span{ color:            #ff8a00;
-                     background-color: #ffffff; }
-.hate img          { border: 5px solid #ff8a00; }
-#credits a.hate    { color:            #ff8a00; }
+.love              { background-color: #e00000; }
+.love.selected span{ color:            #e00000; }
+.love img          { border: 5px solid #e00000; }
+#credits a.love    { color:            #e00000; }
 
-.think             { background-color: #d2ff00; }
-.think.selected span{ color:            #d2ff00;
-                     background-color: #ffffff; }
-.think img         { border: 5px solid #d2ff00; }
-#credits a.think   { color:            #d2ff00; }
+.hate              { background-color: #ff8b00; }
+.hate.selected span{ color:            #ff8b00; }
+.hate img          { border: 5px solid #ff8b00; }
+#credits a.hate    { color:            #ff8b00; }
+
+.think             { background-color: #9ebf00; }
+.think.selected span{ color:            #9ebf00; }
+.think img         { border: 5px solid #9ebf00; }
+#credits a.think   { color:            #677c00; }
 
 .believe           { background-color: #00cd18; }
-.believe.selected span{ color:            #00cd18;
-                     background-color: #ffffff; }
+.believe.selected span{ color:            #00cd18; }
 .believe img       { border: 5px solid #00cd18; }
 #credits a.believe { color:            #00cd18; }
 
-.feel              { background-color: #00ff96; }
-.feel.selected span{ color:            #00ff96;
-                     background-color: #ffffff; }
-.feel img          { border: 5px solid #00ff96; }
-#credits a.feel    { color:            #00ff96; }
+.feel              { background-color: #00e084; }
+.feel.selected span{ color:            #00e084; }
+.feel img          { border: 5px solid #00e084; }
+#credits a.feel    { color:            #00e084; }
 
 .wish              { background-color: #007eff; }
-.wish.selected span{ color:            #007eff;
-                     background-color: #ffffff; }
+.wish.selected span{ color:            #007eff; }
 .wish img          { border: 5px solid #007eff; }
 #credits a.wish    { color:            #007eff; }
 
@@ -122,7 +123,7 @@ ul.sidebar li a span {
   font-size: 14px;
   line-height: 15px;
   letter-spacing: -1px;
-  border-top: 5px solid #fff;
+  border-top: 3px solid #555;
 }
 #credits a { background: none; }
 .fb-like {
